@@ -39,6 +39,8 @@ Creating a server
     bot.ipc.start(host="0.0.0.0",port=8080,path="/ipc")
     bot.run(token)
 
+Then we will connect to our hosted server
+
 Connecting to an server
 -------------------------
 
@@ -48,8 +50,8 @@ Connecting to an server
     import quart
 
     app = quart.Quart(__name__)
-    ipc = ipc.Server(host="test.mts_ipc.repl.co", path="/ipc", secret_key="my_key")
-    # above one hosted on repl, here host is domain of repl 
+    ipc = ipc.Server(host="test.mts_ipc.rrrdev.cf", path="/ipc", secret_key="my_key")
+    # above one hosted on a VPS, here host is domain of web VPS
 
     @app.route("/")
     async def index():
